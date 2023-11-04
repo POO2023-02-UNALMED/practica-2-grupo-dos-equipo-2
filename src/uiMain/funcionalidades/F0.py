@@ -27,3 +27,16 @@ def obtener_paciente_por_input():
         
         if paciente_elegido is None:
             print("No hemos podido encontrar al paciente en nuestro sistema, por favor intente de nuevo.")
+
+def obtener_entero_con_limite_por_input(limite_inferior, limite_superior, mensaje):
+    entero_chequeado = None
+    
+    while entero_chequeado is None or entero_chequeado < limite_inferior or entero_chequeado > limite_superior:
+        try:
+            entero_chequeado = int(input(mensaje))
+            if entero_chequeado < limite_inferior or entero_chequeado > limite_superior:
+                print("Entrada inválida, por favor intente de nuevo.")
+        except ValueError:
+            print("Entrada inválida, por favor intente de nuevo.")
+    
+    return entero_chequeado
