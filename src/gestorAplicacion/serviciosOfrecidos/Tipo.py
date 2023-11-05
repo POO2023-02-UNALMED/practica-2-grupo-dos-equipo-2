@@ -10,7 +10,7 @@ from enum import Enum
 
 class Tipo(Enum):
     # Los valores enteros 1, 2 y 3 se asignan para darles un valor único a cada
-    # miembro de la enumeración, sin embargo, no son importantes, pueden ser cualquier
+    # miembro de la enumeración, sin embargo, no son importantes, pueden ser cualquier identificador
     CONSULTA = 1
     CIRUGIA = 2
     TERAPIA = 3
