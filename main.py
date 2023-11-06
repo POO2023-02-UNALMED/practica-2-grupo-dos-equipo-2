@@ -57,7 +57,7 @@ if __name__ == "__main__":
     cita2 = pacientePrueba2.agendarCita(
         ortopedista, "fecha2", Tipo.CIRUGIA, Especialidad.ORTOPEDISTA)
     cita3 = pacientePrueba2.agendarCita(
-        oftalmologa, "fecha3", Tipo.TERAPIA, Especialidad.OPTOMETRISTA)
+        oftalmologa, "fecha3", Tipo.TERAPIA, Especialidad.OFTALMOLOGO)
     cita4 = pacientePrueba3.agendarCita(
         ortopedista, "fecha4", Tipo.CIRUGIA, Especialidad.ORTOPEDISTA)
     cita5 = pacientePrueba3.agendarCita(
