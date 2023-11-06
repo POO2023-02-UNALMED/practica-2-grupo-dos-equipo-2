@@ -25,21 +25,19 @@ class Hospital:
         self._cuentaBancaria = CuentaBancaria()
 
     # Método para añadir nuevos pacientes al hospital
-    @staticmethod
-    def anadirPacientes(p):
-        Hospital._pacientes.append(p)
+    @classmethod
+    def anadirPacientes(cls, p):
+        cls._pacientes.append(p)
 
     # Método para añadir nuevos medicos al hospital
-    # Nota para mi misma no deben de ser métodos estaticos
-    # Son métodos de clase!!@classmethod!!!!
-    @staticmethod
-    def anadirMedicos(m):
-        Hospital._medicos.append(m)
+    @classmethod
+    def anadirMedicos(cls, m):
+        cls._medicos.append(m)
 
     # Método para añadir nuevas enfermedades al hospital
-    @staticmethod
-    def anadirEnfermedades(e):
-        Hospital._enfermedades.append(e)
+    @classmethod
+    def anadirEnfermedades(cls, e):
+        cls._enfermedades.append(e)
 
     # Método que retorna el paciente segun su numero de Identificacion, returna none si no esta en el hospital
 
