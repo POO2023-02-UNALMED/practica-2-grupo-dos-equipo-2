@@ -2,8 +2,12 @@
 Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
-from gestorAplicacion.sujeto import Paciente,Medico,Enfermedad
-from gestorAplicacion.serviciosOfrecidos import Tratamiento
+from src.gestorAplicacion.serviciosOfrecidos.Tratamiento import Tratamiento
+from src.gestorAplicacion.sujeto.Paciente import Paciente
+from src.gestorAplicacion.sujeto.Enfermedad import Enfermedad
+from src.gestorAplicacion.sujeto.Medico import Medico
+
+
 #Clase que generará la orden médica, aquí introduciremos todo lo necesario que tiene una orden medica
 class OrdenMedica:
     #inicializador
