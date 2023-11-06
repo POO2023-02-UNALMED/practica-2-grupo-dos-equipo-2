@@ -3,10 +3,13 @@ Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
-from instalaciones import Hospital
-from sujeto import Persona, Categoria
-from adminHospitalaria import Cita, Pago, HistoriaClinica, CuentaBancaria
-from serviciosOfrecidos import Tratamiento, Terapia, Cirugia, Consulta
+from src.gestorAplicacion.instalaciones.Hospital import Hospital
+from src.gestorAplicacion.sujeto.Persona import Persona
+from src.gestorAplicacion.adminHospitalaria.Cita import Cita
+from src.gestorAplicacion.adminHospitalaria.Pago import Pago
+from src.gestorAplicacion.adminHospitalaria.HistoriaClinica import HistoriaClinica
+from src.gestorAplicacion.adminHospitalaria.CuentaBancaria import CuentaBancaria
+
 
 # Descripción: Representa a un Paciente dentro del sistema de salud.
 
@@ -23,7 +26,7 @@ class Paciente(Persona, Pago):
         self._talla = talla
         self._serviciosSinPagar = []
         self._serviciosSeleccionados = []
-        self._ultimaCita=[]
+        self._ultimaCita = []
         Hospital.anadirPacientes(self)
         # Nota: A la persona que usaba los atributos citas y consultas, por favor use los atributos que se encuentran en historia clinica que representan esto mismo.
 

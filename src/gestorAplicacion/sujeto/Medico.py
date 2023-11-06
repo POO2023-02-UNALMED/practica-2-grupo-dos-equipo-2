@@ -3,8 +3,8 @@ Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
-from instalaciones import Hospital
-from Persona import Persona
+from src.gestorAplicacion.instalaciones.Hospital import Hospital
+from src.gestorAplicacion.sujeto.Persona import Persona
 
 
 class Medico(Persona):
