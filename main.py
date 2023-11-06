@@ -9,6 +9,7 @@ from src.baseDatos.serializador import Serializador
 from src.baseDatos.deserializador import Deserializador
 from src.gestorAplicacion.serviciosOfrecidos.Consulta import Consulta
 from src.gestorAplicacion.serviciosOfrecidos.Terapia import Terapia
+from src.gestorAplicacion.serviciosOfrecidos.Cirugia import Cirugia
 from src.gestorAplicacion.serviciosOfrecidos.Tipo import Tipo
 from src.gestorAplicacion.sujeto.Categoria import Categoria
 from src.gestorAplicacion.sujeto.Especialidad import Especialidad
