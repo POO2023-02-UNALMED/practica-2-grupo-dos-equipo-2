@@ -4,12 +4,9 @@ Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
 
-from abc import ABC, abstractmethod
-
 # Descripcion: Esta clase abstracta representa a una persona
 
-
-class Persona(ABC):
+class Persona():
 
     # Inicializador
     def __init__(self, nombre, categoria, numeroIdentificacion):
