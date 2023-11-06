@@ -3,9 +3,9 @@ Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
-from adminHospitalaria import CuentaBancaria
-from instalaciones import Banco
-from sujeto import Paciente
+from src.gestorAplicacion.adminHospitalaria.CuentaBancaria import CuentaBancaria
+from src.gestorAplicacion.instalaciones.Banco import Banco
+from src.gestorAplicacion.sujeto.Paciente import Paciente
 from baseDatos.serializador import serializador
 import pickle
 

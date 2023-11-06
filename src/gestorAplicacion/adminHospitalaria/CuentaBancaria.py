@@ -3,7 +3,7 @@ Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
-from instalaciones import Organos
+from src.gestorAplicacion.instalaciones.Organos import Organos
 import random
 
 # Descripción: Esta clase representa una cuenta bancaria con funcionalidades específicas,
