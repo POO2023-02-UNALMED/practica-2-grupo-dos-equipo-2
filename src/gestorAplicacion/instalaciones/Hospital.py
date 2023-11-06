@@ -4,8 +4,8 @@ Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
 from src.gestorAplicacion.adminHospitalaria.CuentaBancaria import CuentaBancaria
-from src.gestorAplicacion.instalaciones.Banco import Banco
-from src.gestorAplicacion.sujeto.Paciente import Paciente
+#from src.gestorAplicacion.instalaciones.Banco import Banco
+#from src.gestorAplicacion.sujeto.Paciente import Paciente
 from src.baseDatos.serializador import Serializador
 import pickle
 
