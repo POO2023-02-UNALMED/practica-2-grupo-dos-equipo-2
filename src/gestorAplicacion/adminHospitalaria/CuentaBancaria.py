@@ -9,7 +9,6 @@ import random
 # Descripción: Esta clase representa una cuenta bancaria con funcionalidades específicas,
 # como saldo, deuda, estado de reporte y la capacidad de donar órganos.
 
-
 class CuentaBancaria:
 
     # Inicializador
