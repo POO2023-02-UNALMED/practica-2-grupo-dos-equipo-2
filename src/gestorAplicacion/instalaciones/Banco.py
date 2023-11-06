@@ -2,16 +2,14 @@
 Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
-import sys
+
 
 # Descripción: Clase Banco que gestiona las transferencias, créditos y donaciones entre pacientes y hospitales.
-
-max_float = sys.float_info.max
 class Banco:
     
     def __init__(self):
         # Establece la caja fuerte con el valor máximo de float
-        self._cajaFuerte = max_float
+        self._cajaFuerte = 9999999999999999999999999999999999
 
     # Realiza una transferencia desde el paciente al hospital, si el monto es positivo y el saldo del paciente es suficiente.
     def transferencia(self, paciente, hospital, monto):

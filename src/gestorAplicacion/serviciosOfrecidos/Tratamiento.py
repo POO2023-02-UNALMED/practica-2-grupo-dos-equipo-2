@@ -10,7 +10,7 @@ from src.gestorAplicacion.sujeto.EvaluacionMedica import EvaluacionMedica
 # Descripción: Esta clase abstracta representa un tratamiento médico
 
 
-class Tratamiento (ABC, EvaluacionMedica):
+class Tratamiento (EvaluacionMedica, ABC):
 
     # Inicializador
     def __init__(self, nombre, especialidad, enfermedad, cita):

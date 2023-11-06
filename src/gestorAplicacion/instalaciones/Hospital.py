@@ -6,7 +6,7 @@ Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 from src.gestorAplicacion.adminHospitalaria.CuentaBancaria import CuentaBancaria
 from src.gestorAplicacion.instalaciones.Banco import Banco
 from src.gestorAplicacion.sujeto.Paciente import Paciente
-from baseDatos.serializador import serializador
+from src.baseDatos.serializador import Serializador
 import pickle
 
 # Descripción: Esta clase representa un hospital en nuestro sistema médico
