@@ -7,10 +7,14 @@ from src.gestorAplicacion.instalaciones.Hospital import Hospital
 from src.gestorAplicacion.instalaciones.Banco import Banco
 from src.baseDatos.serializador import Serializador
 from src.baseDatos.deserializador import Deserializador
-from src.gestorAplicacion.adminHospitalaria.CuentaBancaria import CuentaBancaria
-from src.gestorAplicacion.adminHospitalaria.Cita import Cita
-from src.gestorAplicacion.serviciosOfrecidos import Cirugia, Consulta, Terapia, Tipo
-from src.gestorAplicacion.sujeto import Categoria, Especialidad, Medico, Paciente, Enfermedad
+from src.gestorAplicacion.serviciosOfrecidos.Consulta import Consulta
+from src.gestorAplicacion.serviciosOfrecidos.Terapia import Terapia
+from src.gestorAplicacion.serviciosOfrecidos.Tipo import Tipo
+from src.gestorAplicacion.sujeto.Categoria import Categoria
+from src.gestorAplicacion.sujeto.Especialidad import Especialidad
+from src.gestorAplicacion.sujeto.Medico import Medico
+from src.gestorAplicacion.sujeto.Paciente import Paciente
+from src.gestorAplicacion.sujeto.Enfermedad import Enfermedad
 
 if __name__ == "__main__":
 
