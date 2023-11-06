@@ -11,7 +11,7 @@ class ventana_inicio(Tk):
         self.resizable(0,0)
         # CONFIGURACION VR--TEXTO HDV DESARROLLADORES
         self.varHDV = StringVar()
-        self.varHDV.set("Desarrolladores")
+        self.varHDV.set("Programadores")
 
         self.hola =StringVar()
         self.hola.set('')
@@ -29,7 +29,7 @@ class ventana_inicio(Tk):
         self.P1.pack(side=LEFT)
         self.P3 = Frame(self.P1, width=400, height=150)
         self.P3.grid(row=0, column=0)
-        self.saludo = Label(self.P3, text="Bienvenidos al placer de viajar\n""Haz click en la imagen para empezar\n""⇣", font=("Segoe UI", 12))
+        self.saludo = Label(self.P3, text="Bienvenidos a Athenea OlympiCare\n""Haz click en la imagen para empezar\n""⇣", font=("Segoe UI", 12))
         self.P4 = Frame(self.P1, width=400, height=350, bg="black")
         self.P4.grid(row=1, column=0)
         self.contenedorImagen = Label(self.P4)
@@ -61,7 +61,7 @@ class ventana_inicio(Tk):
         self.numClicksHDV = 0
 
         # LISTA MENEJO IMAGENES DESARROLLADORES
-        self.direcciones = ['./imagenes/--r1.png', './imagenes/--r2.png', './imagenes/--r3.png', './imagenes/--r4.png','./imagenes/--c1.png', './imagenes/--c2.png', './imagenes/--c3.png', './imagenes/--c4.png','./imagenes/--m1.png', './imagenes/--m2.png', './imagenes/--m3.png', './imagenes/--m4.png','./imagenes/--q1.png', './imagenes/--q2.png', './imagenes/--q3.png', './imagenes/--q4.png','./imagenes/--yu.png']
+        self.direcciones = ['./imagenes/--r1.png', './imagenes/--r2.png', './imagenes/--r3.png', './imagenes/--r4.png','./imagenes/--c1.png', './imagenes/--c2.png', './imagenes/--c3.png', './imagenes/--c4.png','./imagenes/--m1.png', './imagenes/--m2.png', './imagenes/--m3.png', './imagenes/--m4.png','./imagenes/--q1.png', './imagenes/--q2.png', './imagenes/--q3.png', './imagenes/--q4.png','./imagenes/p-1.png','./imagenes/p-2.png','./imagenes/p-3.png','./imagenes/p-4.png','./imagenes/--yu.png']
         self.cambio_posiciones = []
 
         # LISTA MANEJO DE IMAGENES DEL SISTEMA
@@ -77,13 +77,13 @@ class ventana_inicio(Tk):
         self.im_desa_pos2 = Label(self.W2)
         self.im_desa_pos3 = Label(self.W3)
         self.im_desa_pos4 = Label(self.W4)
-        self.im_desa_pos1["image"] = self.cambio_posiciones[16]
+        self.im_desa_pos1["image"] = self.cambio_posiciones[20]
         self.im_desa_pos1.pack()
-        self.im_desa_pos2["image"] = self.cambio_posiciones[16]
+        self.im_desa_pos2["image"] = self.cambio_posiciones[20]
         self.im_desa_pos2.pack()
-        self.im_desa_pos3["image"] = self.cambio_posiciones[16]
+        self.im_desa_pos3["image"] = self.cambio_posiciones[20]
         self.im_desa_pos3.pack()
-        self.im_desa_pos4["image"] = self.cambio_posiciones[16]
+        self.im_desa_pos4["image"] = self.cambio_posiciones[20]
         self.im_desa_pos4.pack()
         self.contador = 0
 
@@ -99,12 +99,12 @@ class ventana_inicio(Tk):
 
     #GENERA LA SALIDA DEL TEXTO DE EN LA DESCRIPCION
     def desno(self):
-        self.hola.set("Permite la compra de un tiquete para un vuelo, con seleccion de\n" "silla y alojamiento, ademas de la ejecucion de opciones de administrador ✈")
+        self.hola.set("SISTEMA MÉDICO DE RECUPERACIÓN DEPORTIVA")
 
 
     #GENERA LA SALIDA DE LA VENTANA DE INICIO DANDO CULMINADO EL FUNCIONAMIENTO DE LA APLICACION
     def salir(self):
-        Admin.salirDelSistema()
+        #Admin.salirDelSistema() # Se debe serializar 
         return super().destroy()
 
     #OCASIONA LA APERTURA DE LA VENTANAPRINCIAL
@@ -118,22 +118,22 @@ class ventana_inicio(Tk):
     def cambioHDV(self,b):
         self.numClicksHDV += 1
         if (self.numClicksHDV == 1):
-            self.varHDV.set("Diomedes Dionisio Díaz Maestre \n""26 de mayo de 1957, La Junta, Colombia \n""22 de diciembre de 2013, Valledupar, Colombia\n""Diomedes Díaz\n""cantante y compositor colombiano\n""Diomedes Díaz fue un icónico cantante y compositor colombiano. \nConocido como 'El Cacique de la Junta', lanzó más de 30 álbumes \ny se consolidó como uno de los máximos exponentes de la música vallenata.")
+            self.varHDV.set("Maria Paula Ardila Otero \n""20 Años\n Ciencias de la computación" )
             self.evento(12)
         elif (self.numClicksHDV == 2):
-            self.varHDV.set("Nombre: José Pascual Antonio Aguilar Barraza \n""Nacimiento: 17 de mayo de 1919, Villanueva, México \n""Fallecimiento: 19 de junio de 2007, Ciudad de México\n" "Conocido simplemente como Antonio Aguilar,\n fue un cantante y actor mexicano.\n Su discografía ha sobrepasado los 160 álbumes \n con ventas de más de 25 millones de copias.​\n Al despuntar la década de los 50 debutó como actor en el cine.\n")
+            self.varHDV.set("Daniela Cristina Garzón Torres \n""22 Años\n Ciencias de la computación" )
             self.evento(12)
         elif (self.numClicksHDV == 3):
-            self.varHDV.set("Úrsula Hilaria Celia de la Caridad Cruz Alfonso\n"
-"21 de octubre de 1925, La Habana, Cuba\n"
-"16 de julio de 2003, Fort Lee, Nueva Jersey cantante cubana-americana\n"
-"fue una cantante cubana-americana. Nació en 1925 y falleció en 2003."
-)
+            self.varHDV.set("Leopold  \n""24 Años\n Ciencias de la computación" )
             self.evento(12)
         elif (self.numClicksHDV == 4):
-            self.varHDV.set("Vicente Fernández Gómez\n""17 de febrero de 1940, Huentitán el Alto, Guadalajara, México\n""12 de diciembre de 2021 \n""cantante y actor mexicano\n""es reconocido como una leyenda de la música ranchera.")
+            self.varHDV.set("Ronal \n""100 Años\n Ciencias de la computación" )
+            self.evento(12)
+        elif(self.numClicksHDV==5):
+            self.varHDV.set("Jose \n""100 Años\n Ingeniería de sistemas" )
             self.evento(12)
             self.numClicksHDV = 0
+            
 
     #PROVOCA LA APERTURA DE LAS IMAGENES DE CADA DESARROLLADOR SEGUN SU IDENTIFICADOR POSICIONAL
     def evento(self,c):
@@ -141,6 +141,7 @@ class ventana_inicio(Tk):
         y2 = 0
         y3 = 0
         y4 = 0
+        y5 = 0
         self.contador += 1
         if self.contador == 1:
             y1 = self.contador - 1
@@ -162,11 +163,16 @@ class ventana_inicio(Tk):
             y2 = self.contador + 9
             y3 = self.contador + 10
             y4 = self.contador + 11
+        elif self.contador == 5:
+            y1 = self.contador + 11
+            y2 = self.contador + 12
+            y3 = self.contador + 13
+            y4 = self.contador + 14
         self.im_desa_pos1.config(image=self.cambio_posiciones[y1])
         self.im_desa_pos2.config(image=self.cambio_posiciones[y2])
         self.im_desa_pos3.config(image=self.cambio_posiciones[y3])
         self.im_desa_pos4.config(image=self.cambio_posiciones[y4])
-        if self.contador == 4:
+        if self.contador == 5:
             self.contador = 0
 
     # OCASIONA EL CAMBIO EN LA POSICION DE LAS IMAGENES DEL SISTEMA
