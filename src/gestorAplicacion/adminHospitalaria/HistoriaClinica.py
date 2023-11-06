@@ -3,12 +3,6 @@ Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
-from src.gestorAplicacion.sujeto.Paciente import Paciente
-from src.gestorAplicacion.sujeto.Enfermedad import Enfermedad
-from src.gestorAplicacion.adminHospitalaria.OrdenMedica import OrdenMedica
-from src.gestorAplicacion.serviciosOfrecidos.Terapia import Terapia
-from src.gestorAplicacion.serviciosOfrecidos.Cirugia import Cirugia
-from src.gestorAplicacion.serviciosOfrecidos.Consulta import Consulta
 # Descripción: Esta clase representa una Historia Clínica en el sistema de administración hospitalaria.
 
 
