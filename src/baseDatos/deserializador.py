@@ -4,7 +4,6 @@ Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
 import pickle
-import os
 
 # Clase encargada de la deserialización de objetos.
 
@@ -22,5 +21,5 @@ class Deserializador:
 
     @classmethod
     def cargarBanco(cls):
-        with open("baseDatos/temp/Banco.pkl", "wb") as archivo:
+        with open("baseDatos/temp/Banco.pkl", "rb") as archivo:
             return pickle.load(archivo)

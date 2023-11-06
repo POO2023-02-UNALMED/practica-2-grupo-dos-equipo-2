@@ -85,7 +85,7 @@ if __name__ == "__main__":
     Serializador.guardarBanco(banco)
     Serializador.guardarHospital(hospital)
 
-    
 
-    for p in hospital.getPacientes():
-        print(p)
+
+    #for p in hospital.getPacientes():
+        #print(p)

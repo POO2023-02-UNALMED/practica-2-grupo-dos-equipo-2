@@ -4,7 +4,6 @@ Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
 import pickle
-import os
 
 # Clase encargada de la serialización de objetos.
 
