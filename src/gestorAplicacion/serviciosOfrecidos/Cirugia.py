@@ -3,8 +3,8 @@ Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
-from serviciosOfrecidos import Consulta
-from instalaciones import Lugar
+from src.gestorAplicacion.serviciosOfrecidos.Consulta import Consulta
+from src.gestorAplicacion.instalaciones.Lugar import Lugar
 
 # Descripción: Esta clase hereda de Consulta y representa una cirugía médica.
 # Incluye información específica para las cirugías, como los resultados de los laboratorios, los resultados de la anestesia y las instrucciones especiales para el paciente.

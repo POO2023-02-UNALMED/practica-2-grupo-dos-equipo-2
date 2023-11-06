@@ -4,8 +4,8 @@ Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
 
-from instalaciones import Hospital
-from sujeto import EvaluacionMedica
+from src.gestorAplicacion.instalaciones.Hospital import Hospital
+from src.gestorAplicacion.sujeto.EvaluacionMedica import EvaluacionMedica
 
 # Clase que representa una enfermedad en el sistema médico
 

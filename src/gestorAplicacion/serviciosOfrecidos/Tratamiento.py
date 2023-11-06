@@ -4,8 +4,8 @@ Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
 from abc import ABC, abstractmethod
-from adminHospitalaria import Cita
-from sujeto import EvaluacionMedica
+from src.gestorAplicacion.adminHospitalaria.Cita import Cita
+from src.gestorAplicacion.sujeto.EvaluacionMedica import EvaluacionMedica
 
 # Descripción: Esta clase abstracta representa un tratamiento médico
 

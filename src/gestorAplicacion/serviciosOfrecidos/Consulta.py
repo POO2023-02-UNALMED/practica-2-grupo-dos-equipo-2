@@ -3,9 +3,10 @@ Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
-from serviciosOfrecidos import Tratamiento
-from instalaciones import Lugar
-from sujeto import Paciente, Categoria
+from src.gestorAplicacion.serviciosOfrecidos.Tratamiento import Tratamiento
+from src.gestorAplicacion.instalaciones.Lugar import Lugar
+from src.gestorAplicacion.sujeto.Paciente import Paciente
+from src.gestorAplicacion.sujeto.Categoria import Categoria
 
 # Descripción: La clase Consulta representa un tipo específico de tratamiento médico que se realiza en un consultorio.
 

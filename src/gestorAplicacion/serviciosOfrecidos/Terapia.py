@@ -3,8 +3,8 @@ Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 
-from serviciosOfrecidos import Consulta
-from instalaciones import Lugar
+from src.gestorAplicacion.serviciosOfrecidos.Consulta import Consulta
+from src.gestorAplicacion.instalaciones.Lugar import Lugar
 
 # Descripción: Esta clase representa una terapia, un tipo específico de consulta médica.
 
