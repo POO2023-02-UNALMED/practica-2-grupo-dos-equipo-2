@@ -141,25 +141,26 @@ class Paciente(Persona, Pago):
 
     # Métodos para actualizar la historia clinica
     def actualizarHistorialEnfermedades(self, nuevaEnfermedad):
-        self._historiaClinica.getHistorialEnfermedades().append(nuevaEnfermedad)
+        if nuevaEnfermedad not in self.getHistoriaClinica().getHistorialEnfermedades():
+            self.getHistoriaClinica().getHistorialEnfermedades().append(nuevaEnfermedad)
 
     def actualizarHistorialOrdenes(self, nuevaOrden):
-        self._historiaClinica.getHistorialOrdenes().append(nuevaOrden)
+        self.getHistoriaClinica().getHistorialOrdenes().append(nuevaOrden)
 
     def actualizarHistorialTerapias(self, nuevaTerapia):
-        self._historiaClinica.getHistorialTerapias().append(nuevaTerapia)
+        self.getHistoriaClinica().getHistorialTerapias().append(nuevaTerapia)
 
     def actualizarHistorialCirugias(self, nuevaCirugia):
-        self._historiaClinica.getHistorialCirugias().append(nuevaCirugia)
+        self.getHistoriaClinica().getHistorialCirugias().append(nuevaCirugia)
 
     def actualizarHistorialConsultas(self, nuevaConsulta):
-        self._historiaClinica.getHistorialConsultas().append(nuevaConsulta)
+        self.getHistoriaClinica().getHistorialConsultas().append(nuevaConsulta)
 
     def actualizarHistorialRutinas(self, nuevaRutina):
-        self._historiaClinica.getHistorialRutinas().append(nuevaRutina)
+        self.getHistoriaClinica().getHistorialRutinas().append(nuevaRutina)
 
     def actualizarHistorialCitas(self, nuevaCita):
-        self._historiaClinica.getHistorialCitas().append(nuevaCita)
+        self.getHistoriaClinica().getHistorialCitas().append(nuevaCita)
 
     # Getters y Setters
     def getHistoriaClinica(self):

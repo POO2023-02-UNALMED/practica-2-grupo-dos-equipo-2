@@ -18,6 +18,7 @@ class Consulta (Tratamiento):
     # Inicializador
     def __init__(self, nombre, especialidad, enfermedad, cita):
         super().__init__(nombre, especialidad, enfermedad, cita)
+        cita.getPaciente().actualizarHistorialEnfermedades(enfermedad)
 
     # Calcula el precio de la consulta para un paciente dado.
     def calcularPrecio(paciente):

@@ -39,6 +39,14 @@ class Hospital:
     def anadirEnfermedades(cls, e):
         cls._enfermedades.append(e)
 
+    # Método para vaciar las listas antes de deserializar
+    # De esta forma se tienen siempre las listas actuales
+    @classmethod
+    def limpiarDatos(cls):
+        cls.setPacientes([])
+        cls.setMedicos([])
+        cls.setHabitaciones([])
+
     # Método que retorna el paciente segun su numero de Identificacion, returna none si no esta en el hospital
 
     def buscarPaciente(self, numeroIdentificacion):
@@ -274,24 +282,46 @@ class Hospital:
 
         return mensaje
 
+    # Getters y Setters atributos estáticos
+
+    @classmethod
+    def getHabitaciones(cls):
+        return cls._habitaciones
+
+    @classmethod
+    def setHabitaciones(cls, habitaciones):
+        cls._habitaciones = habitaciones
+
+    @classmethod
+    def getPacientes(cls):
+        return cls._pacientes
+
+    @classmethod
+    def setPacientes(cls, pacientes):
+        cls._pacientes = pacientes
+
+    @classmethod
+    def getMedicos(cls):
+        return cls._medicos
+
+    @classmethod
+    def setMedicos(cls, medicos):
+        cls._medicos = medicos
+
+    @classmethod
+    def getEnfermedades(cls):
+        return cls._enfermedades
+
+    @classmethod
+    def setEnfermedades(cls, enfermedades):
+        cls._enfermedades = enfermedades
+
     # Getters y Setters
     def getNombre(self):
         return self._nombre
 
     def getDireccion(self):
         return self._direccion
-
-    def getHabitaciones(self):
-        return self._habitaciones
-
-    def getPacientes(self):
-        return self._pacientes
-
-    def getMedicos(self):
-        return self._medicos
-
-    def getEnfermedades(self):
-        return self._enfermedades
 
     def getCuentaBancaria(self):
         return self._cuentaBancaria
@@ -301,19 +331,6 @@ class Hospital:
 
     def setDireccion(self, direccion):
         self._direccion = direccion
-
-    def setHabitaciones(self, habitaciones):
-        self._habitaciones = habitaciones
-
-    # Corregir métodos a métodos de clase para todos los atributos de clase
-    def setPacientes(self, pacientes):
-        self._pacientes = pacientes
-
-    def setMedicos(self, medicos):
-        self._medicos = medicos
-
-    def setEnfermedades(self, enfermedades):
-        self._enfermedades = enfermedades
 
     def setCuentaBancaria(self, cuentaBancaria):
         self._cuentaBancaria = cuentaBancaria
