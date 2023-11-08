@@ -305,6 +305,7 @@ class Hospital:
     def setHabitaciones(self, habitaciones):
         self._habitaciones = habitaciones
 
+    # Corregir métodos a métodos de clase para todos los atributos de clase
     def setPacientes(self, pacientes):
         self._pacientes = pacientes
 

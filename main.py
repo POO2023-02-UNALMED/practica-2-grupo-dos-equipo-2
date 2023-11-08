@@ -19,10 +19,13 @@ from src.gestorAplicacion.sujeto.Paciente import Paciente
 from src.gestorAplicacion.sujeto.Enfermedad import Enfermedad
 
 if __name__ == "__main__":
+    
 
     # La serializacion sigue sin funcionar
-    banco = Deserializador.cargarBanco()
+    #banco = Deserializador.cargarBanco()
+    
     hospital = Deserializador.cargarHospital()
-
+    print(hospital.getNombre())
+    print(hospital.getCuentaBancaria().getSaldo())
     for p in hospital.getPacientes():
-        print(p.getNombre())
+        print(p.getNombre()) #:'(

@@ -12,10 +12,10 @@ class Serializador:
 
     @classmethod
     def guardarHospital(cls, hospital):
-        with open("baseDatos/temp/Hospital.pkl", "wb") as archivo:
+        with open("src/baseDatos/temp/Hospital.pkl", "wb") as archivo:
             pickle.dump(hospital, archivo)
 
     @classmethod
     def guardarBanco(cls, banco):
-        with open("baseDatos/temp/Banco.pkl", "wb") as archivo:
+        with open("src/baseDatos/temp/Banco.pkl", "wb") as archivo:
             pickle.dump(banco, archivo)

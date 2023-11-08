@@ -13,7 +13,7 @@ class Deserializador:
     # Retorna: Instancia del hospital deserializada
     @classmethod
     def cargarHospital(cls):
-        with open("baseDatos/temp/Hospital.pkl", "rb") as archivo:
+        with open("src/baseDatos/temp/Hospital.pkl", "rb") as archivo:
             return pickle.load(archivo)
 
     # Carga una instancia del banco.
@@ -21,5 +21,5 @@ class Deserializador:
 
     @classmethod
     def cargarBanco(cls):
-        with open("baseDatos/temp/Banco.pkl", "rb") as archivo:
+        with open("src/baseDatos/temp/Banco.pkl", "rb") as archivo:
             return pickle.load(archivo)
