@@ -21,6 +21,7 @@ class Paciente(Persona, Pago):
         super().__init__(categoria, numeroIdentificacion, nombre)
         self._historiaClinica = HistoriaClinica(self)
         self._cuentaBancaria = CuentaBancaria()
+        self._habitacion = None
         self._sexo = sexo
         self._peso = peso
         self._talla = talla
@@ -174,6 +175,12 @@ class Paciente(Persona, Pago):
 
     def setCuentaBancaria(self, cuentaBancaria):
         self._cuentaBancaria = cuentaBancaria
+
+    def getHabitacion(self):
+        return self._habitacion
+    
+    def setHabitacion(self,h):
+        self._habitacion = h
 
     def getSexo(self):
         return self._sexo
