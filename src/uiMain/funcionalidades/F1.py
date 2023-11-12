@@ -2,9 +2,9 @@
 Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
-from gestorAplicacion.sujeto import Paciente, Medico, Categoria, Especialidad, ListaProfesionales
-from gestorAplicacion.adminHospitalaria import Hospital
-from gestorAplicacion.instalaciones import Fecha
+from gestorAplicacion.sujeto import Paciente, Medico, Categoria, Especialidad
+from gestorAplicacion.instalaciones import Hospital
+from gestorAplicacion.adminHospitalaria import Fecha
 from gestorAplicacion.serviciosOfrecidos import Tipo
 from uiMain import Screen
 from uiMain.F0 import obtenerEnumPorInput, obtenerEnteroConLimitePorInput
@@ -12,7 +12,7 @@ from datetime import datetime
 
 class F1:
 
-    # EL HOSPITALXD
+    # EL HOSPITAL
     TESTNOMBRE = "testNombre"
     TESTDIRECCION = "testDireccion"
     HOSPITAL = Hospital(TESTNOMBRE, TESTDIRECCION)
