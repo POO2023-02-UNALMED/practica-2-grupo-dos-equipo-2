@@ -28,3 +28,5 @@ if __name__ == "__main__":
     print(hospital.getCuentaBancaria().getSaldo())
     for p in hospital.getPacientes():
         print(p.getNombre())
+
+    

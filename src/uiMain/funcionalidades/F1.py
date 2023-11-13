@@ -2,17 +2,17 @@
 Autores: Maria P. Ardila, Jose N. Duque,
 Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
-from gestorAplicacion.sujeto import Paciente, Medico, Categoria, Especialidad, ListaProfesionales
-from gestorAplicacion.adminHospitalaria import Hospital
-from gestorAplicacion.instalaciones import Fecha
+from gestorAplicacion.sujeto import Paciente, Medico, Categoria, Especialidad
+from gestorAplicacion.instalaciones import Hospital
+from gestorAplicacion.adminHospitalaria import Fecha
 from gestorAplicacion.serviciosOfrecidos import Tipo
 from uiMain import Screen
-from uiMain.F0 import obtenerEnumPorInput, obtenerEnteroConLimitePorInput
+from uiMain.funcionalidades.F0 import obtener_entero_por_input, obtener_entero_con_limite_por_input
 from datetime import datetime
 
 class F1:
 
-    # EL HOSPITALXD
+    # EL HOSPITAL
     TESTNOMBRE = "testNombre"
     TESTDIRECCION = "testDireccion"
     HOSPITAL = Hospital(TESTNOMBRE, TESTDIRECCION)
@@ -22,9 +22,9 @@ class F1:
     def generarCita(paciente):
 
         # Se solicita la información de la especialidad para la que se desea tener cita.
-        tipo = obtenerEnumPorInput(Tipo, "Ingrese el tipo de cita deseada (CONSULTA, CIRUGIA, TERAPIA): ")
+        tipo = obtener_entero_por_input(Tipo, "Ingrese el tipo de cita deseada (CONSULTA, CIRUGIA, TERAPIA): ")
 
-        especialidad = obtenerEnumPorInput(Especialidad, "Ingrese la especialidad (ORTOPEDISTA, FISIOTERAPEUTA, NUTRICIONISTA, OPTOMETRISTA): ")
+        especialidad = obtener_entero_por_input(Especialidad, "Ingrese la especialidad (ORTOPEDISTA, FISIOTERAPEUTA, NUTRICIONISTA, OPTOMETRISTA): ")
         categoria = paciente.getCategoria()
 
         # Se pide la fecha para la cita.
@@ -72,17 +72,17 @@ class F1:
         añoActual = now.year
 
         while fecha is None:
-            año = obtenerEnteroConLimitePorInput(AÑOACTUAL, LIMITEAÑO, "Ingrese el año deseado para la cita:")
-            mes = obtenerEnteroConLimitePorInput(1, 12, "Ingrese el mes deseado para la cita:")
+            año = obtener_entero_con_limite_por_input(AÑOACTUAL, LIMITEAÑO, "Ingrese el año deseado para la cita:")
+            mes = obtener_entero_con_limite_por_input(1, 12, "Ingrese el mes deseado para la cita:")
 
             if mes in [1, 3, 4, 7, 8, 10, 12]:
-                dia = obtenerEnteroConLimitePorInput(1, 31, "Ingrese el día deseado para la cita (de 1 a 31):")
+                dia = obtener_entero_con_limite_por_input(1, 31, "Ingrese el día deseado para la cita (de 1 a 31):")
             elif mes in [5, 6, 9, 11]:
-                dia = obtenerEnteroConLimitePorInput(1, 30, "Ingrese el día deseado para la cita (de 1 a 30):")
+                dia = obtener_entero_con_limite_por_input(1, 30, "Ingrese el día deseado para la cita (de 1 a 30):")
             else:
-                dia = obtenerEnteroConLimitePorInput(1, 28, "Ingrese el día deseado para la cita (de 1 a 28) :")
+                dia =obtener_entero_con_limite_por_input(1, 28, "Ingrese el día deseado para la cita (de 1 a 28) :")
 
-            hora = obtenerEnteroConLimitePorInput(APERTURA, CIERRE, f"Ingrese la hora deseada para la cita en formato militar y sin ingresar minutos, números enteros entre {APERTURA} y {CIERRE}")
+            hora = obtener_entero_con_limite_por_input(APERTURA, CIERRE, f"Ingrese la hora deseada para la cita en formato militar y sin ingresar minutos, números enteros entre {APERTURA} y {CIERRE}")
 
             fecha = Fecha(dia, mes, año, hora)
 

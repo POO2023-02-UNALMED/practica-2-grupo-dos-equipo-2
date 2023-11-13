@@ -4,7 +4,14 @@ Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 """
 from src.gestorAplicacion.sujeto import Paciente
 from src.uiMain.funcionalidades import F0
+from enum import Enum
 
+
+
+class Categoria(Enum):
+    ALTO_RENDIMIENTO = "ALTO_RENDIMIENTO"
+    OLIMPICO = "OLIMPICO"
+    AFICIONADOS = "AFICIONADOS"
 
 def screen_orden_medica():
     paciente= F0.obtener_paciente_por_input()
@@ -12,7 +19,31 @@ def screen_orden_medica():
     if cita is None:
         print("el Paciente no tiene citas en el registro")
         return
+    
+@staticmethod
+def obtener_eleccion_de_si_o_no(mensaje):
+        eleccion = ""
+        while eleccion not in ["Y", "N"]:
+            print(mensaje)
+            print("Ingresa Y para sí o N para no")
+            eleccion = F0.UTILITY_SCANNER.nextLine().upper()
+            if eleccion not in ["Y", "N"]:
+                print("Entrada inválida, por favor intente de nuevo.")
+        return eleccion
+   
 
+@staticmethod
+def obtener_entero_por_input(mensaje):
+        entrada = ""
+        entrada_convertida = 0
+        while entrada_convertida == 0:
+            print(mensaje)
+            entrada = F0.UTILITY_SCANNER.nextLine()
+            try:
+                entrada_convertida = int(entrada)
+            except ValueError:
+                F0.indicar_entrada_invalida()
+        return entrada_convertida
 
 def obtener_paciente_por_input():
     paciente_elegido = None
