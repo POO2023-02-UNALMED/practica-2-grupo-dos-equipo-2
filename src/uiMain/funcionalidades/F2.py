@@ -7,7 +7,7 @@ Ronal Y. Castro, Daniela C. García y Leopold P. Lanard
 from src.gestorAplicacion.sujeto import Medico
 from src.gestorAplicacion.adminHospitalaria import Categoria, OrdenMedica
 from src.gestorAplicacion.sujeto import Especialidad
-from src.gestorAplicacion.serviciosOfrecidos.recursosDeTerapia import Restriccion
+from src.gestorAplicacion.serviciosOfrecidos import Restriccion
 
 imput = input  # En Python no necesitamos un objeto Scanner, podemos usar `input` directamente.
 
