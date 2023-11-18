@@ -186,3 +186,5 @@ class ventana_inicio(Tk):
 if __name__ == "__main__":
     ventana_inicios = ventana_inicio()
     ventana_inicios.mainloop()
+
+    
