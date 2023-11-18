@@ -182,6 +182,7 @@ class ventana_inicio(Tk):
             self.acumulador = 0
         self.nueva_ventana.config(image=self.chang_posiciones[self.acumulador])
 
+
 if __name__ == "__main__":
     ventana_inicios = ventana_inicio()
     ventana_inicios.mainloop()
