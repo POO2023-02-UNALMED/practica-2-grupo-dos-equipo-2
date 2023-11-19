@@ -1,4 +1,53 @@
 from tkinter import *
+from tkinter import messagebox
+
+class VentanaUsuario(Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.master = master
+        self.pack()
+
+        # Configuración de la ventana principal del usuario
+        self.configurar_ventana_usuario()
+
+    def configurar_ventana_usuario(self):
+        # Configuración de la zona de menús
+        menubar = Menu(self.master)
+        self.master.config(menu=menubar)
+
+        # Menú Archivo
+        menu_archivo = Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Archivo", menu=menu_archivo)
+        menu_archivo.add_command(label="Aplicación", command=self.mostrar_info_aplicacion)
+        menu_archivo.add_command(label="Salir", command=self.salir)
+
+        # Menú Procesos y Consultas
+        menu_procesos_consultas = Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Procesos y Consultas", menu=menu_procesos_consultas)
+        #procesos y consultas primera práctica
+
+        # Menú Ayuda
+        menu_ayuda = Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Ayuda", menu=menu_ayuda)
+        menu_ayuda.add_command(label="Acerca de", command=self.mostrar_info_autores)
+
+        
+        
+
+    def mostrar_info_aplicacion(self):
+        messagebox.showinfo("Información de la Aplicación", "Aquí va la información de la aplicación.")
+
+    def salir(self):
+        self.master.destroy()
+
+    def mostrar_info_autores(self):
+        messagebox.showinfo("Acerca de", "Autores de la aplicación:\n"
+                            "Maria Paula Ardila Otero\n"
+                            "Daniela Cristina Garzón Torres\n"
+                            "Leopold\n"
+                            "Ronal\n"
+                            "Jose")
+        
 
 class ventana_inicio(Tk):
     def __init__(self,*args,**kwargs):
@@ -109,10 +158,10 @@ class ventana_inicio(Tk):
 
     #OCASIONA LA APERTURA DE LA VENTANAPRINCIAL
     def abrirVentanaSecundaria(self):
-         if not VentanaSecundaria.en_uso:
-            self.ventana_secundaria = VentanaSecundaria()
-            self.ventana_secundaria.ventanaInicio = self
-            self.iconify()
+        if not hasattr(self, 'ventana_usuario'):  # Verificar si la ventana_usuario ya está creada
+            self.ventana_usuario = VentanaUsuario(self)
+            self.ventana_usuario.master = self  # Establecer la ventana principal como maestra
+            self.ventana_usuario.iconify()
 
     #SUSCITA EL CAMBIO DE INFORMACIÓN DE LA HOJA DE VIDA E IMAGENES DE LOS DESARROLLADORES
     def cambioHDV(self,b):
@@ -186,5 +235,3 @@ class ventana_inicio(Tk):
 if __name__ == "__main__":
     ventana_inicios = ventana_inicio()
     ventana_inicios.mainloop()
-
-    
