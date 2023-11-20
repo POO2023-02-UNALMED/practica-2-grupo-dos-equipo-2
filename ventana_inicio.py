@@ -1,8 +1,10 @@
 from tkinter import *
+import tkinter as tk
+from src.VentanaSecundaria import ventana_secundaria
 
 class ventana_inicio(Tk):
     def __init__(self,*args,**kwargs):
-        super().__init__(*args,**kwargs)
+        super().__init__(*args,**kwargs) 
         # CONFIGURACION PARAMETROS PRINCIPALES DE LA VENTANA
         self.geometry("800x500")
         self.title("Inicio")
@@ -18,7 +20,7 @@ class ventana_inicio(Tk):
         # CONFIGURACION ZONA DE MENU
         self.menubar = Menu(self)
         self.menuInicio = Menu(self.menubar)
-        self.menubar.add_cascade(menu=self.menuInicio, label="Inicio")
+        self.menubar.add_cascade(menu=self.menuInicio, label="MENU|")
         self.menuInicio.add_command(label="Descripcion",command=self.desno)
         self.menuInicio.add_command(label="Salir",command=self.salir)
         self["menu"] = self.menubar
@@ -109,8 +111,9 @@ class ventana_inicio(Tk):
 
     #OCASIONA LA APERTURA DE LA VENTANAPRINCIAL
     def abrirVentanaSecundaria(self):
-         if not VentanaSecundaria.en_uso:
-            self.ventana_secundaria = VentanaSecundaria()
+   
+         if not ventana_secundaria.en_uso:
+            self.ventana_secundaria = ventana_secundaria(self)
             self.ventana_secundaria.ventanaInicio = self
             self.iconify()
 
@@ -182,6 +185,21 @@ class ventana_inicio(Tk):
             self.acumulador = 0
         self.nueva_ventana.config(image=self.chang_posiciones[self.acumulador])
 
+class ventana_secundaria(tk.Toplevel):
+    def __init__(self,*args,**kwargs):
+        super().__init__(*args,**kwargs)
+        self.en_uso=False
+        
+
+
+
+
+ 
+
 if __name__ == "__main__":
     ventana_inicios = ventana_inicio()
+    ventana_secundarias = ventana_secundaria
     ventana_inicios.mainloop()
+    
+    
+
